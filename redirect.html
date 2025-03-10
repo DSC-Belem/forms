@@ -8,11 +8,13 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             background-color: #f4f4f9;
+            padding: 20px;
         }
         .container {
             text-align: center;
@@ -20,19 +22,24 @@
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            font-size: 24px;
+            max-width: 600px;
+            width: 100%;
             margin-bottom: 20px;
         }
+        h1 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
         .button {
-            padding: 15px 30px;
+            padding: 12px 20px;
             font-size: 16px;
-            margin: 10px;
+            margin-top: 10px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s;
+            width: 100%;
+            max-width: 400px;
         }
         .button:hover {
             background-color: #0056b3;
@@ -46,18 +53,39 @@
             background-color: #007bff;
             color: white;
         }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 18px;
+            }
+            .button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 16px;
+            }
+            .button {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Bem vindo ao redirecionamento de formularios de visitação do DSC Belem. Se você é Brasileiro e quer visitar qualquer uma das intituições judaicas de Belem,  por favor preencha o formulario abaixo</h1>
-        <button class="button button-brazilian" onclick="window.location.href='https://forms.gle/KhNkknMTu1pbk2t37'">Brasileiros - Por favor preencham esse formulario.</button>
+        <h1>Bem-vindo ao redirecionamento de formulários de visitação do DSC Belém. Se você é brasileiro e quer visitar qualquer uma das instituições judaicas de Belém, por favor, preencha o formulário abaixo.</h1>
+        <button class="button button-brazilian" onclick="window.location.href='https://forms.gle/KhNkknMTu1pbk2t37'">Brasileiros - Preencha este formulário</button>
     </div>
 
-        <div class="container">
-        <h1>Welcome to the visitation forms redirect of DSC Belem. If you are a foreigner who wants to visit any of the jewish institutions of Belem, please fill out the form below.</h1>
-        <button class="button button-foreign" onclick="window.location.href='https://forms.gle/oCvsVu1ekzBbhWqN8'">Foreigners - Please fill out this form.</button>
+    <div class="container">
+        <h1>Welcome to the visitation forms redirect of DSC Belem. If you are a foreigner who wants to visit any of the Jewish institutions of Belem, please fill out the form below.</h1>
+        <button class="button button-foreign" onclick="window.location.href='https://forms.gle/oCvsVu1ekzBbhWqN8'">Foreigners - Please fill out this form</button>
     </div>
 
 </body>
